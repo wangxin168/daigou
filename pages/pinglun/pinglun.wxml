@@ -1,0 +1,17 @@
+<!--pages/pinglun/pinglun.wxml-->
+<!-- <text>pages/pinglun/pinglun.wxml</text> -->
+
+
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入您想写的评论..." name="textarea"/>
+    <view class='shi'>
+      <image src='../../img/shizi.png' bindtap='up_img' name="up_img"/>
+      <image wx:for="{{tempFilePaths}}" src='{{item}}' name="pic" wx:key="index" mode="aspectFill"/>
+
+      <input hidden name="pic" value ="{{tempFilePaths}}"></input>
+    </view>
+    <button form-type="submit" > 发送评论 </button>
+  </form>
+  
+</view>

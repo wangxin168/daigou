@@ -1,0 +1,15 @@
+<!--pages/chong/chong.wxml-->
+<!-- <text>pages/chong/chong.wxml</text> -->
+
+<view class='da'>
+  <view class='wen'>
+    请选择你要充值会员的类型
+  </view>
+  <view wx:for="{{huiyuan}}" wx:key="index" wx:for-index="index" wx:for-item="item"  bindtap="bindjin" data-classify="{{item}}"  data-index='{{index}}'  class="jin {{changs==index?'active':''}}">
+    <text>{{item.jibie}}</text>
+    <text>{{item.qian}}</text>
+  </view>
+  <!-- <navigator url='../zhifu/zhifu'> -->
+    <view class='chong' bindtap='chong'>去充值</view>
+  <!-- </navigator> -->
+</view>

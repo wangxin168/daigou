@@ -1,0 +1,17 @@
+<!-- pages/zhekou/zhekou.wxml -->
+<!-- <text>pages/zhekou/zhekou.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='luyi'>
+  <view class='fenxiang'>
+    <text>{{notice_title.notice_title}}</text>
+  </view>
+  <view class='shoucang'>
+    <text>{{notice_title.notice_create_time}}</text>
+  </view>
+</view>
+
+<view class='zong'>
+  <view class='xiang_yi'>
+  </view>
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>

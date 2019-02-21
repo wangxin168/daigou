@@ -1,0 +1,9 @@
+<!--pages/huifu/huifu.wxml-->
+<!-- <text>pages/huifu/huifu.wxml</text> -->
+<view class="section">
+  <form bindsubmit="bindFormSubmit">
+    <textarea placeholder="请输入您回复的话..." name="textarea"/>
+    <button form-type="submit"> 回复 </button>
+  </form>
+  
+</view>

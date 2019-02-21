@@ -1,0 +1,10 @@
+<!--pages/zhiding/zhiding.wxml-->
+<!-- <text>pages/zhiding/zhiding.wxml</text> -->
+<view class='youhui'>
+  <view>{{zhiding.forum_title}}</view>
+  <text>{{zhiding.forum_content}}</text>
+</view>
+
+<view class='tu'>
+  <image wx:for="{{zhiding.f_img}}" wx:key="index" src='{{item}}' mode="aspectFill"/>
+</view>

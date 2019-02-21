@@ -1,0 +1,28 @@
+<!--pages/serch/serch.wxml-->
+<!-- <text>pages/serch/serch.wxml</text> -->
+<view class='serch'>
+  <view class='le'>
+    <image src='../../img/serch.png' />
+  </view>
+  <view class='ri'>
+    <input placeholder-class='placeholder' placeholder='输入搜索您想要的物品' type='text' bindinput="voteTitle" value="{{voteTitle}}" />
+  </view>
+
+</view>
+<!-- <button bindtap='sou'>搜索</button> -->
+<view class='chanpin_ul' wx:for="{{zhekou}}" wx:key="{{index}}" bindtap="zheKou" id="{{item.id}}">
+  <!-- <navigator url='../zhekou/zhekou'> -->
+  <view class='chanpin_li'>
+    <view class='tu'>
+      <image src='{{item.img}}' />
+    </view>
+    <view class='wen'>
+      <view class='shang'>
+        <view>{{item.discount_title}}</view>
+        <view>{{item.discount_create_time}}</view>
+      </view>
+      <view class='xia'>{{item.discount_title_fu}}</view>
+    </view>
+  </view>
+  <!-- </navigator> -->
+</view>

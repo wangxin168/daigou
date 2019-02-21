@@ -1,0 +1,14 @@
+<!--pages/duopin/duopin.wxml-->
+<!-- <text>pages/duopin/duopin.wxml</text> -->
+<loading hidden="{{goods_name}}">
+  加载中...
+</loading>
+<view class='duopin_ul'>
+  <view class='duopin_li' wx:for="{{goods_name}}" wx:key="{{index}}" bindtap='xiangQing' data-shop_id="{{item.shop_id}}" data-brid="{{item.id}}" data-brandname="{{item.brand_name}}">
+    <view>
+      <view style="background:url({{item.img}}) no-repeat;background-size:100% 100%;" class='tu'></view>
+      <view class='wen'>{{item.brand_name}}</view>
+    </view>
+  </view>
+  
+</view>

@@ -1,0 +1,89 @@
+/* pages/zhekou/zhekou.wxss */
+
+.luyi{
+  width: 94%;
+  margin-left: 6%;
+}
+.luyi .fenxiang{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 34rpx;
+  height: 70rpx;
+  align-items: center;
+}
+.luyi .fenxiang text{
+  width: 83%;
+  margin-right: 20rpx;
+  overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+}
+
+.luyi .fenxiang button{
+  padding: 0;
+  width:122rpx;
+  height:60rpx;
+  background: white;
+  border-radius: 0;
+}
+.luyi .fenxiang button image{
+  width: 100%;
+  height: 100%;
+}
+button::after{
+  border: none;
+}
+.luyi .shoucang{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #AEAEAE;
+}
+.luyi .shoucang image{
+  width: 102rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+  
+}
+
+.zong{
+  width: 100%;
+}
+.zong .xiang_yi,.xiang_er{
+  width: 100%;
+}
+.zong .xiang_yi image{
+  width: 751rpx;
+  height: 309rpx;
+  margin-bottom: 27rpx;
+}
+.zong text{
+  font-size: 22rpx;
+  color: #AEAEAE ;
+  display: block;
+  text-align: center;
+  margin-top: 6rpx;
+}
+.zong .xiang_er image{
+  width: 751rpx;
+  height: 530rpx;
+  margin: 31rpx auto;
+}
+.zong .wxParse-p{
+  width: 94%;
+  margin: 20rpx auto 30rpx;
+  font-size: 28rpx;
+}
+.zong .wxParse-p image{
+  width: 100%!important;
+}
+.wxParse-inline{
+  margin: 20rpx 0;
+}
+.wxParse-img{
+  width: 100%!important;
+  display: block;
+  margin: auto;
+}

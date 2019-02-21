@@ -1,0 +1,95 @@
+<!--pages/me/me.wxml-->
+<!-- <text>pages/me/me.wxml</text> -->
+<view class='beijing'>
+  <image src='/img/mebeijing.png' class='beijing_tu'></image>
+  <view class='shai_top'>
+    <image src='{{user_img}}' class='touxiang' wx:if="{{chongzhi==0}}"></image>
+    <image src='{{xinxi.data.user_img}}' class='touxiang' wx:if="{{chongzhi!=0}}"></image>
+    <view class='up'>
+      <view class='nickname'>
+        <text wx:if="{{chongzhi==0}}">{{user_nickname}}</text>
+        <text wx:if="{{chongzhi!=0}}">{{xinxi.data.user_nickname}}</text>
+      </view>
+      <view style="font-size:24rpx; color:#ABABAB;margin-top:15rpx;" wx:if="{{chongzhi==0}}">会员截止：您还不是会员</view>
+      <view style="font-size:24rpx; color:#ABABAB;margin-top:15rpx;" wx:if="{{chongzhi!=0}}">会员截止：{{etime}}</view>
+      <view style="font-size:24rpx; color:#ABABAB;margin-top:15rpx;" wx:if="{{chongzhi!=0}}">当前积分：{{xinxi.data.user_jifen}}分</view>
+      <view style="font-size:24rpx; color:#ABABAB;margin-top:15rpx;" wx:if="{{chongzhi==0}}">当前积分：0分</view>
+    </view>
+    <view style='width:20%;color:#C0A369;font-size:30rpx' bindtap='xiaoxi'>
+      <image src='/img/xinfeng.png' style="width:47rpx;height:40rpx;" wx:if="{{is_look==0}}" />
+      <image src='/img/weixiaoxi.png' style="width:47rpx;height:40rpx;" wx:if="{{is_look==1}}" />
+    </view>
+    <image src='../../img/qiandao.png' class='qiandao' bindtap='qianDao' />
+  </view>
+</view>
+
+<view class='me_ul'>
+  <view class='me_li' bindtap='ziliao'>
+    <view style="width:10%;">
+      <image src='../../img/ziliao.png' />
+    </view>
+    <view style="width:80%;font-size:32rpx;">我的资料</view>
+    <view style="width:10%;text-align:center;">
+      <image src='/img/fanhui.png' style='width:20rpx;height:26rpx;'></image>
+    </view>
+  </view>
+  <view class='me_li' bindtap='huiyuan'>
+    <view style="width:10%;">
+      <image src='../../img/huiyuan.png' />
+    </view>
+    <view style="width:80%;font-size:32rpx;">我的会员</view>
+    <view style="width:10%;text-align:center;">
+      <image src='/img/fanhui.png' style='width:20rpx;height:26rpx;display:inline-block;'></image>
+    </view>
+  </view>
+  <view class='me_li' bindtap='shouc'>
+    <view style="width:10%;">
+      <image src='../../img/shoucang.png' />
+    </view>
+    <view style="width:80%;font-size:32rpx;">我的收藏</view>
+    <view style="width:10%;text-align:center;">
+      <image src='/img/fanhui.png' style='width:20rpx;height:26rpx;'></image>
+    </view>
+  </view>
+  <view class='me_li' bindtap='jifen' data-jifen="{{xinxi.data.user_jifen}}">
+    <view style="width:10%;">
+      <image src='../../img/jifen.png' />
+    </view>
+    <view style="width:80%;font-size:32rpx;">我的积分</view>
+    <view style="width:10%;text-align:center;">
+      <image src='/img/fanhui.png' style='width:20rpx;height:26rpx;'></image>
+    </view>
+  </view>
+  <view class='me_li' bindtap='tiezi'>
+    <view style="width:10%;">
+      <image src='../../img/tiezi.png' />
+    </view>
+    <view style="width:80%;font-size:32rpx;">我的帖子</view>
+    <view style="width:10%;text-align:center;">
+      <image src='/img/fanhui.png' style='width:20rpx;height:26rpx;'></image>
+    </view>
+  </view>
+</view>
+
+<view class='zhe' wx:if="{{display}}" bindtap='huiyuan'>
+  <view class='wai'>
+    <view class='li'>
+      <view class='ul'>
+        <view class='ul_wen'>温馨提示</view>
+        <navigator url='/pages/quanyi/quanyi'>
+          <view class='ul_cha'>查看会员权益</view>
+        </navigator>
+      </view>
+      <view class='di'>
+        <view style='font-size:36rpx;margin-top:60rpx;' wx:if="{{chongzhi!=0}}">您的会员体验日期为1个月</view>
+        <view style='font-size:36rpx;margin-top:60rpx;' wx:if="{{chongzhi==0}}">您还不是会员 请充值</view>
+        <view style='font-size:32rpx; color:#989898;margin-top:40rpx;' wx:if="{{chongzhi!=0}}">截止日期：{{etime}}</view>
+        <view style='font-size:32rpx; color:#989898;margin-top:40rpx;' wx:if="{{chongzhi==0}}">截止日期：您还不是会员</view>
+        <navigator url='/pages/huiyuan/huiyuan'>
+          <view style='font-size:30rpx; color:white;width:443rpx;height:73rpx;line-height:73rpx;background:#000;margin-top:72rpx;'>成为会员</view>
+        </navigator>
+      </view>
+
+    </view>
+  </view>
+</view>

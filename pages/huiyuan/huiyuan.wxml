@@ -1,0 +1,48 @@
+<!--pages/huiyuan/huiyuan.wxml-->
+<!-- <text>pages/huiyuan/huiyuan.wxml</text> -->
+<view class='hui' style='height:{{winHeight}}px'>
+  <view class='da'>
+    <view class='huiyuan'>
+
+      <view class='shang'>
+        <!-- xx会员 -->
+        <text>{{jib}}</text>
+        <navigator url='../quanyi/quanyi'>
+          <text style='font-size: 30rpx;color: #C0A369;'>会员权益</text>
+        </navigator>
+      </view>
+      <view class='zhong'>
+        <!-- 判断数值为几 得到相应的文字  图片  时间段   -->
+        <image src='{{img}}' />
+      </view>
+      <view class='xia' wx:if="{{chongzhi!=0}}">会员时间：{{stime}}——{{etime}}</view>
+      <view class='xia' wx:if="{{chongzhi==0}}">会员时间：{{etime}}</view>
+      <image src='/img/huiyuanb.png' class='beijing_tu'></image>
+    </view>
+    <view class='guize'>
+      <view class='shang'>
+        会员规则
+      </view>
+      <view class='jin'>
+        <image src='../../img/jinpai.png' />
+        <text>金牌会员（年费会员，每年{{jinpai_member}}元）</text>
+      </view>
+      <view class='jin'>
+        <image src='../../img/yinpai.png' />
+        <text>银牌会员（年费会员，每年{{yinpai_member}}元）</text>
+      </view>
+      <view class='jin'>
+        <view>
+          <image src='../../img/puhui.png' style='width:22rpx;height:18rpx;display:inline-block;' />
+        </view>
+        <text>普通会员（年费会员，每年{{putong_member}}元）</text>
+      </view>
+    </view>
+    <!-- <navigator url='../chong/chong'> -->
+      <view class='chong' bindtap='chong'>
+        去充值
+      </view>
+    <!-- </navigator> -->
+  </view>
+</view>
+<view class='dise'></view>

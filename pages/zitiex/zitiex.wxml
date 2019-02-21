@@ -1,0 +1,125 @@
+<!--pages/zitiex/zitiex.wxml-->
+<!-- <text>pages/zitiex/zitiex.wxml</text> -->
+
+<view class='shai' wx:for="{{tiezx}}" wx:key="{{index}}">
+  <view class='shai_top'>
+    <image src='{{item.user_img}}' class='touxiang' />
+    <view style='width:63%;text-align:left;'>
+      <view>
+        <text style="font-size:30rpx; color:#555555 ;">{{item.user_nickname}}</text>
+        <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:20rpx;;" />
+      </view>
+      <view style="font-size:24rpx; color:#ABABAB  ;">{{item.forum_create_time}}</view>
+    </view>
+    <view style='width:20%;color:#C0A369;font-size:30rpx'>浏览{{item.forum_num}}</view>
+  </view>
+</view>
+
+<view class='jieshao' wx:for="{{tiezx}}" wx:key="{{index}}">
+  <view>
+    <view>￥</view>
+    <view>{{item.forum_price}}</view>
+  </view>
+  <text>{{item.forum_title}}</text>
+  <text>类别：{{item.type_name}}</text>
+  <text>品牌：{{item.brand_name}}</text>
+  <text style='margin-bottom:25rpx;'>地址：{{item.forum_address}}</text>
+</view>
+
+<view class='xian'></view>
+<view style='margin-top:10rpx;margin-bottom:100rpx;'>
+<view class='youhui' wx:for="{{tiezx}}" wx:key="{{index}}">
+  <view>
+    <image src='../../img/miaoshu.png' />
+  </view>
+  <text>{{item.forum_content}}</text>
+</view>
+<view class='tu' wx:for="{{tiezx}}" wx:key="index">
+  <image wx:for="{{item.f_img}}" wx:for-item="cell" wx:key="index" src='{{cell}}' mode="widthFix" bindtap="imgYu" data-list="{{item.f_img}}" data-src="{{cell}}" />
+</view>
+<view class='youhui' wx:if="{{yincang!=0}}" style='margin: 40rpx auto 0;'>
+  <view>
+    <image src='../../img/yonghu.png' />
+  </view>
+</view>
+
+
+  <view class='ping' wx:for="{{pinglie}}" wx:key="index" wx:for-item="cell">
+  <view class='yi'>
+    <view class='ping_le' wx:if="{{cell.type==1||cell.type==3}}">
+      <image src='{{cell.user_img}}' />
+    </view>
+    <view wx:if="{{cell.type==2}}" class='louzhu'>
+      回复:<text style='font-size:28rpx; color:#9F9F9F ;'>{{cell.user_nickname}}</text>
+    </view>
+    <!-- type等于1时的右边部分 -->
+    <view class='ping_ri' wx:if="{{cell.type==1||cell.type==3}}">
+      <view class='nick'>
+        <text style='font-size:28rpx; color:#9F9F9F ;'>{{cell.user_nickname}}</text>
+        <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:20rpx;"/>
+      </view>
+      <view class='wen'>
+        {{cell.content}}
+      </view>
+      <view class='tu'>
+        <image wx:for="{{cell.c_img}}" src='{{item}}' wx:key="index" mode="aspectFill" bindtap="imgYu" data-list="{{cell.c_img}}" data-src="{{item}}" />
+      </view>
+      <view class='time'>
+        <text>{{cell.createtime}}</text>
+        <view bindtap='huifu' data-hfuid="{{cell.uid}}" data-fo="{{cell.forum_id}}" wx:if="{{meuid!=cell.uid}}">
+          <image src='../../img/huifu.png' />
+          <text>回复</text>
+        </view>
+        <view wx:if="{{meuid==cell.uid}}" style='font-size:26rpx; color:#9f9f9f;' bindtap='shanping' data-forum="{{cell.forum_id}}" data-zijiuid="{{cell.uid}}" data-id="{{cell.id}}">
+          删除
+        </view>
+      </view>
+    </view>
+    <!-- type等于2时的右边部分 -->
+    <view wx:if="{{cell.type==2}}" class='louzhu_con'>
+      <view class='wen'>
+        {{cell.content}}
+      </view>
+      <view class='time'>
+        <text>{{cell.createtime}}</text>
+        <view bindtap='huifu' data-hfuid="{{cell.uid}}" data-fo="{{cell.forum_id}}" wx:if="{{meuid!=cell.uid}}">
+          <image src='../../img/huifu.png' />
+          <text>回复</text>
+        </view>
+        <view wx:if="{{meuid==cell.uid}}" style='font-size:26rpx; color:#9f9f9f;' bindtap='shanhui' data-idd="{{cell.id}}">
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view class='huinei' wx:for="{{huifu}}" wx:key="index" wx:if="{{item.type==2&&cell.uid==item.huifu_uid}}">
+    <text style='font-size:28rpx; color:#c0a369 ;'>{{item.user_nickname}}:</text>
+    <text class='wen' style='font-size:28rpx; color:#3F3F3F ;'>{{item.content}}</text>
+    <view class='time'>
+      <text>{{item.createtime}}</text>
+      <view bindtap='huifu' data-hfuid="{{item.uid}}" data-fo="{{item.forum_id}}" wx:if="{{meuid!=item.uid}}">
+        <image src='../../img/huifu.png' style="width: 25rpx;height: 25rpx;margin-right: 10rpx;" />
+        <text>回复</text>
+      </view>
+      <view wx:if="{{meuid==item.uid}}" style='font-size:26rpx; color:#9f9f9f;' bindtap='shanhui' data-idd="{{item.id}}">
+        删除
+      </view>
+    </view>
+  </view> -->
+</view>
+</view>
+
+<view class='di' wx:for="{{tiezx}}" wx:key="index">
+  <view class='shouc'>
+    <image src='{{shouc==0?"/img/shou.png":"/img/yishou.png"}}'  bindtap='shouCang'/>
+  </view>
+  <view class='shouc'>
+    <button open-type='share'>
+      <image src='../../img/fenxiang.png'/>
+    </button>
+  </view>
+    <view style='border-right:none' class='shouc' bindtap='ping' data-id="{{item.id}}">
+      <image src='../../img/pinglun.png'/>
+    </view>
+</view>
+<view style='width:100%;height:1rpx;background:white' wx:if="{{chang==1}}"></view>

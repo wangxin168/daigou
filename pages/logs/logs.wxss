@@ -1,0 +1,186 @@
+.log-list {
+  display: flex;
+  flex-direction: column;
+}
+.log-item {
+  margin: 10rpx;
+}
+
+.da{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 20rpx 0 0;
+  box-sizing: border-box;
+}
+
+.da .sou{
+  width: 25%;
+  text-align: center;
+  font-size: 24rpx;
+  
+}
+.da .sou .shop{
+  margin-top: 4rpx;
+}
+.da .sou image{
+  width: 21rpx;
+  height: 13rpx;
+}
+.da .sou view{
+  margin-top: -4rpx;
+}
+.da .ri{
+  width: 65%;
+  align-items: center;
+  padding: 0 20rpx; 
+  display: flex;
+  height: 66rpx;
+  background: #F0F0F0 ;
+}
+da .ri .serch{
+  line-height: 19rpx;
+}
+.da .ri image{
+  width: 30rpx;
+  height: 30rpx;
+  display: inline-block;
+  margin-top: 8rpx;
+}
+.da .ri .right{
+  font-size: 26rpx;
+  width: 407rpx;
+  margin-left: 10rpx;
+  color: #A7A7A7;
+}
+.banner{
+  width: 100%;
+  margin-top: 20rpx;
+  height: 300rpx;
+}
+.banner swiper{
+  width: 100%;
+  height: 300rpx!important;
+}
+.banner image{
+  width: 100%;
+  height: 300rpx;
+}
+.gengduo{
+  width: 156rpx;
+  font-size: 26rpx;
+  color: #C0A369;
+  border-bottom: 1rpx solid #C0A369;
+  margin: 25rpx auto;
+}
+
+.swiper-tab{
+	width: 100%;
+	text-align: center;
+	line-height: 80rpx;
+  white-space: nowrap;
+}
+.swiper-tab .zuo{
+  width: 100%;
+  padding: 20rpx 0;
+}
+.swiper-tab .zuo .check image{
+  width: 32rpx;
+  height: 15rpx;
+}
+.swiper-tab-list{  
+  font-size: 30rpx;
+  display: inline-block;
+	width: 20%;
+	color: #000;
+  height: 93px;
+  font-weight: bold;
+  z-index: 10;
+  text-align: center;
+}
+.swiper-tab-list view{
+  height: 20px;
+  line-height: 2px;
+  z-index: -1;
+}
+.swiper-tab-list image{
+  width: 114rpx;
+  height: 114rpx;
+  z-index: 1;
+  border-radius: 50%;
+}
+.on{
+  color: #C0A369;
+}
+.swiper-box{ 
+  display: block;
+  /* height: 100%;  */
+  width: 100%; 
+  overflow: hidden; 
+  background: #F0F0F0;
+}
+.swiper-box .swiper-item{
+  margin-top: 20rpx;
+  width: 100%;
+  background: #EDEDED;
+  /* padding: 0 0 30rpx 0; */
+  /* height: 100%; */
+}
+.swiper-box .swiper-item .lv_ul{
+  width: 94%;
+  margin: auto;
+  background: #fff;
+}
+
+.swiper-box .swiper-item .lv_ul .lv_li{
+  width: 100%;
+  display: flex;
+  height: 294rpx;
+  box-shadow: 0 3rpx 7rpx 1px rgba(188,188,188,0.50);
+  align-items: center;
+  margin-top: 18rpx;
+  position: relative;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .zheng{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80rpx;
+  height: 80rpx;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .tu{
+  width: 40%;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .tu image{
+  width: 271rpx;
+  height: 259rpx;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .wen{
+  width: 60%;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .wen text{
+  display: block;
+  font-size: 26rpx;
+  color: #8B8B8B;
+  margin-top: 10rpx;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .wen text:nth-of-type(1){
+  font-size: 30rpx;
+  color: #292929;
+}
+.swiper-box .swiper-item .lv_ul .lv_li .wen text:nth-of-type(2){
+  color: #C0A369;
+}
+.zuo{
+  display: flex;
+}
+.chongzhi{
+  width: 100%;
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.chongzhi view{
+  margin-top: 30rpx;
+}
+

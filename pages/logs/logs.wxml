@@ -1,0 +1,84 @@
+<!--logs.wxml-->
+<loading hidden="{{chanpin||chanpin==''}}">
+  加载中...
+</loading>
+<view class="container log-list">
+  <view class='da'>
+    <view class='sou' bindtap='shangquan'>
+      <view class='shop'>
+        {{shop_name.shop_name}}
+      </view>
+      <view>
+        <image src='/img/xiala.png' />
+      </view>
+    </view>
+    <view class='ri'>
+      <view class='left'>
+        <image src='../../img/serch.png' />
+      </view>
+      <view class='serch' bindtap='sercher'>
+        <view class='right'>
+          输入搜索您想要的物品
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 轮播 -->
+  <view class='banner'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true">
+      <block wx:for="{{img}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{item.img}}" class="slide-image" height="150" mode="aspectFill" bindtap='shopXiang' id="{{item.id}}" data-brand_name="{{item.brand_name}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='he' style='display:flex;align-items: center;'>
+    <!-- tab  切换 -->
+    <scroll-view scroll-x class="swiper-tab">
+      <view class='zuo'>
+        <view wx:for="{{brand_name}}" wx:key="{{item.id}}" data-indx="{{index}}" wx:if="{{index<4}}" class="swiper-tab-list {{currentTab==index ? 'on' : ''}}" data-current="{{index}}" data-tid="{{item.id}}" data-shopid="{{item.shop_id}}" bindtap="swichNav">
+          <!-- <view class='kuang'> -->
+            <image src='{{item.img}}' data-current="{{index}}" mode="aspectFill"style="border: 2px solid #EFEFEF;width:106rpx;height:106rpx;"></image>
+          <!-- </view> -->
+          <view bindtap="swichNav" data-current="{{index}}" class='wenwen'>{{item.brand_name}}</view>
+          <view class='check' wx:if="{{currentTab==index}}">
+            <image src='/img/check.png' style='border-radius:0;'></image>
+          </view>
+        </view>
+        <view class='swiper-tab-list' bindtap='duopin' wx:if="{{chongzhi!=0}}">
+          <image src='../../img/more.png' />
+          <view class='view_wen'>更多</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="swiper-box" bindchange="bindChange" wx:for="{{brand_name}}" wx:key="index" wx:if="{{index==changes}}" data-ind="{{index}}" data-chs="{{changes}}">
+    <view class='swiper-item' wx:if="{{list_none!=0}}">
+      <view class='lv_ul' wx:for="{{chanpin}}" wx:for-index="idx" wx:for-item="cell" wx:key="idx" id="{{cell.id}}" data-shop_id="{{cell.shop_id}}" bindtap="shopXiang" data-brand_name="{{cell.brand_name}}">
+        <view class='lv_li'>
+          <view class='tu'>
+            <image src='{{cell.img[0]}}' />
+          </view>
+          <view class='wen'>
+            <text>{{cell.goods_name}}</text>
+            <text>价格:￥{{is_member==1?"***":cell.goods_price}}</text>
+            <text>品牌：{{cell.brand_name}}</text>
+            <text>型号：{{cell.goods_model}}</text>
+            <text>条码：{{cell.goods_barcode}}</text>
+            <text>商家：{{cell.shop_name}}</text>
+          </view>
+          <image src='{{cell.goods_type==1?"/img/zheng.png":"/img/qing.png"}}' class='zheng'></image>
+        </view>
+      </view>
+      <view bindtap='gengduo' data-shop_id="{{item.shop_id}}" data-brid="{{item.id}}" data-brandname="{{item.brand_name}}" class='gengduo' wx:if="{{list_none!=0}}">点击查看更多</view>
+    </view>
+  </view>
+  <view wx:if="{{chongzhi==0}}" class='chongzhi'>
+    <view>您不是会员</view>
+    <view>充值后才可查看相关数据</view>
+  </view>
+  <view class='chongzhi' wx:if="{{list_none==0}}">
+    <view>该分类下无商品</view>
+  </view>
+</view>

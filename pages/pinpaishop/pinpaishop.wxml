@@ -1,0 +1,53 @@
+<!--pages/pinpaishop/pinpaishop.wxml-->
+<!-- <text>pages/pinpaishop/pinpaishop.wxml</text> -->
+<loading hidden="{{pinpai}}">
+  加载中...
+</loading>
+<view class='xiala'>
+  <view class='all' bindtap='jiaGe'>
+    <view class='all_da'>
+      <text data-cates="0" catchtap='positives'>全部</text>
+      <image src='/img/all.png' class='xiala_tu'></image>
+    </view> 
+  </view>
+  <view class='price' bindtap='shaixuan'>
+      <text>价格</text>
+      <image src='/img/one.png' class='price_tu' wx:if="{{shai==0}}"></image>
+      <image src='/img/three.png' class='price_tu' wx:if="{{shai==1}}"></image>
+      <image src='/img/two.png' class='price_tu' wx:if="{{shai==2}}"></image>
+  </view>
+</view>
+
+<view class='lv_ul'>
+  <!-- <navigator url='../shopxiang/shopxiang'> -->
+    <view class='lv_li' wx:for="{{pinpai}}" wx:key="index"  bindtap="shopXiang"  id="{{item.id}}" data-brand_name="{{item.brand_name}}">
+      <view class='tu'>
+        <image src='{{item.img[0]}}'/>
+      </view>
+      <view class='wen'>
+        <text>{{item.goods_name}}</text>
+        <text>价格:￥{{is_member==1?"xx":item.goods_price}}</text>
+        <text>品牌：{{item.brand_name}}</text>
+        <text>型号：{{item.goods_model}}</text>
+        <text>条码：271826417239</text>
+        <text>商家：{{item.shop_name}}</text>
+      </view>
+      <image src='{{item.goods_type==1?"/img/zheng.png":"/img/qing.png"}}' class='zheng'></image>
+    </view>
+  <!-- </navigator> -->
+</view>
+
+<view class='zhe' wx:if="{{display}}" bindtap='jiaGe'>
+  <view class='bai'>
+    <view class='wen' data-cates="1" catchtap='positives'>
+    <view wx:if='{{changs==1}}' class='gou'>正价</view>
+      <view wx:else>正价</view>
+      <view wx:if="{{changs==1}}">√</view>
+    </view>
+    <view class='wen' data-cates="2" catchtap='positives'>
+      <view wx:if='{{changs==2}}' class='gou'>清仓</view>
+      <view wx:else>清仓</view>
+      <view wx:if="{{changs==2}}">√</view>
+    </view>
+  </view>
+</view>

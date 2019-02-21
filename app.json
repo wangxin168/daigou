@@ -1,0 +1,73 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/success/success",
+    "pages/notice_detail/notice_detail",
+    "pages/take/take",
+    "pages/me/me",
+    "pages/huiyuan/huiyuan",
+    "pages/jifen/jifen",
+    "pages/logs/logs",
+    "pages/tiezi/tiezi",
+    "pages/xiaoxi/xiaoxi",
+    "pages/gongxugai/gongxugai",
+    "pages/gongxuer/gongxuer",
+    "pages/serchsan/serchsan",
+    "pages/sercher/sercher",
+    "pages/duopin/duopin",
+    "pages/pinpaishop/pinpaishop",
+    "pages/gongxu/gongxu",
+    "pages/pinglun/pinglun",
+    "pages/huifu/huifu",
+    "pages/ziliao/ziliao",
+    "pages/zhekou/zhekou",
+    "pages/shangquan/shangquan",
+    "pages/zitiex/zitiex",
+    "pages/shouc/shouc",
+    "pages/chong/chong",
+    "pages/tiezx/tiezx",
+    "pages/shopxiang/shopxiang",
+    "pages/quanyi/quanyi",
+    "pages/jiming/jiming",
+    "pages/zhifu/zhifu",
+    "pages/zhiding/zhiding",
+    "pages/serch/serch"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#000",
+    "color": "#9E9E9E", 
+    "selectedColor": "#C0A369",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "折扣信息",
+        "iconPath": "img/zhen.png",
+        "selectedIconPath": "img/zhey.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "商品信息",
+        "iconPath": "img/shopn.png",
+        "selectedIconPath": "img/shopy.png"
+      },
+      {
+        "pagePath": "pages/take/take",
+        "text": "交易论坛",
+        "iconPath": "img/taken.png",
+        "selectedIconPath": "img/takey.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "img/men.png",
+        "selectedIconPath": "img/mey.png"
+      }
+    ]
+  }
+}

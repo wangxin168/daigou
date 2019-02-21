@@ -1,0 +1,127 @@
+/* pages/tiezi/tiezi.wxss */
+.top{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+}
+.xian{
+  width: 100%;
+  height: 22rpx;
+  background: #F5F5F5;
+}
+
+/**index.wxss**/
+.swiper-tab{
+	width: 100%;
+	border-bottom: 2rpx solid #E8E8E8;
+	text-align: center;
+	line-height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.swiper-tab-list{  
+  font-size: 30rpx;
+  display: inline-block;
+	/* width: 20%; */
+	color: #000;
+  font-weight: bold;
+}
+.on{
+	border-bottom: 5rpx solid #C0A369 ;
+}
+ 
+.swiper-box{ 
+  display: block;
+  /* height: 100%;  */
+  width: 100%; 
+  overflow: hidden; 
+  margin-top: 102rpx;
+}
+
+
+.zhi{
+  width: 92%;
+  margin: auto;
+}
+.zhi .shou{
+  width: 100%;
+  font-size: 32rpx;
+}
+.zhi .shou image{
+  width: 80rpx;
+  height: 33rpx;
+}
+.zhi .tu{
+  width: 100%;
+  margin: 20rpx 0;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+.zhi .tu image{
+  width: 228rpx;
+  height: 228rpx;
+  margin-left: 0.9%;
+  margin-top: 10rpx;
+  box-sizing: border-box;
+}
+.zhi .di{
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #ABABAB;
+  height: 30rpx；
+}
+.zhi .di .da{
+  width: 210rpx;
+  display: flex;
+  justify-content: space-between;
+  height:30rpx;
+  line-height:30rpx;
+}
+.zhi .di .da view{
+  padding: 0 10rpx;
+  border-right: 1px solid #ABABAB;
+}
+
+.zhi .di image{
+  width: 88rpx;
+  height: 27rpx;
+  float: right;
+}
+.zhi .di view .bianji{
+  width: 30rpx;
+  height: 26rpx;
+  margin-left: 10rpx;
+}
+.shai{
+  width: 94%;
+  margin: auto;
+  border-bottom: 1px solid #E9E9E9;
+  padding-bottom: 30rpx;
+}
+.shai .shai_top{
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.shai .shai_top .touxiang{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.chongzhi{
+  width: 100%;
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.chongzhi view{
+  margin-top: 30rpx;
+}

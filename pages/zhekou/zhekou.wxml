@@ -1,0 +1,24 @@
+<!-- pages/zhekou/zhekou.wxml -->
+<!-- <text>pages/zhekou/zhekou.wxml</text> -->
+<loading hidden="{{discount}}">
+  加载中...
+</loading>
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='luyi'>
+  <view class='fenxiang' wx:if="{{display!=0}}">
+    <text>{{discount.data.discount_title}}</text>
+    <button open-type='share' style='width:132rpx;height:65rpx;'>
+      <image src='../../img/fenxiang2.png' />
+    </button>
+  </view>
+  <view class='shoucang' wx:if="{{display!=0}}" >
+    <text>{{discount.data.discount_create_time}}</text>
+    <image src='{{discount.is_shoucang==0?"/img/shou_none.png":"/img/shou_yes.png"}}' bindtap='shouCang'/>
+  </view>
+</view>
+
+<view class='zong'>
+  <view class='xiang_yi'>
+  </view>
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>

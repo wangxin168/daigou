@@ -1,0 +1,28 @@
+/* pages/pinglun/pinglun.wxss */
+
+.section textarea{
+  width: 70%;
+  margin: 40rpx auto;
+  border-bottom: 1px solid  #E9E9E9;
+  font-size: 30rpx;
+  color: #CBCBCB;
+  height: 264rpx;
+}
+.section .shi{
+  width: 70%;
+  margin: auto auto 100rpx auto;
+}
+.section .shi image{
+  width: 172rpx;
+  height: 172rpx;
+  margin: 0 0 50rpx 4rpx;
+}
+button{
+  width: 86%;
+  margin: auto;
+  background: #242424;
+  border: 1px solid #979797;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #ECECEC;
+}

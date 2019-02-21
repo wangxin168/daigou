@@ -1,0 +1,128 @@
+/* pages/shopxiang/shopxiang.wxss */
+.lunbo{
+  width: 100%;
+  height: 745rpx;
+  background: #F5F5F5;
+  overflow: hidden;
+}
+.kuang{
+  width: 100%;
+  height: 572rpx;
+  text-align: center;
+  margin-top: 47rpx;
+}
+.slide-image{
+  width: 547rpx;
+  height: 572rpx;
+}
+.lunbo_bot{
+  display: flex;
+  justify-content: space-between;
+}
+.zhishi{
+  margin-right: 25rpx;
+  margin-top: 62rpx;
+  opacity: 0.21;
+  background: #000000;
+  border-radius: 22px;
+  font-size: 29rpx;
+  color: #FFFFFF;
+  width: 80rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+  text-align: center;
+}
+.zhengjia image{
+  width: 96rpx;
+  height: 34rpx;
+  margin-left: 25rpx;
+  margin-top: 62rpx;
+}
+
+.jieshao{
+  width: 100%;
+
+}
+.jieshao .shang{
+  width: 65%;
+  margin: 26rpx 0 14rpx 35%;
+  display: flex;
+  justify-content: space-between;
+}
+.jieshao .shang button{
+  padding: 0;
+}
+.jieshao .shang image{
+  width: 122rpx;
+  height: 57rpx;
+}
+.jieshao .shang .price text:nth-of-type(1){
+  font-size: 24rpx;
+}
+.jieshao .shang .price text:nth-of-type(2){
+  font-size: 50rpx;
+}
+.jieshao .zhong{
+  font-size: 32rpx;
+  text-align: center;
+}
+.jieshao .xia{
+  text-align: center;
+}
+.jieshao .xia image{
+  width: 171rpx;
+  height: 61rpx;
+  margin: 34rpx 0 29rpx 0
+}
+
+.xian{
+  width: 100%;
+  height: 22rpx;
+  background: #F5F5F5;
+}
+
+.xinxi{
+  width: 94%;
+  margin: auto;
+  
+  margin-top: 32rpx;
+}
+.xinxi image{
+  width: 150rpx;
+  height: 46rpx;
+  display: block;
+}
+.xinxi text{
+  display: block;
+  font-size: 30rpx;
+  color:#AAAAAA;
+  margin-top: 22rpx;
+  margin-bottom: 22rpx;
+}
+.xinxi .bao{
+  width: 488rpx;
+  height: 488rpx;
+  margin: auto;
+  margin-top: 37rpx;
+}
+
+.youhui{
+  width: 94%;
+  margin: 20rpx auto;
+}
+.youhui view{
+  font-size: 26rpx;
+}
+.youhui text{
+  font-size: 26rpx;
+  color: #9F9F9F ;
+}
+.fenxiang button{
+  width:122rpx;
+  height:57rpx;
+  background: white;
+  border-radius: 0;
+}
+button::after{
+  border: none;
+}

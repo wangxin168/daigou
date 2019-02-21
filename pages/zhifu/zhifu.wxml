@@ -1,0 +1,30 @@
+<!--pages/zhifu/zhifu.wxml-->
+<!-- <text>pages/zhifu/zhifu.wxml</text> -->
+
+<view style='width:100%;height:100%;overflow:hidden;'>
+  <view class='kuai'>
+    <text>充值类型</text>
+    <text>{{new_w}}</text>
+  </view>
+  <view class='xian'></view>
+  <view class='kuai'>
+    <text>金额</text>
+    <text style='color: #C0A369;'>{{new_j}}</text>
+  </view>
+  <view class='xian'></view>
+  <view class='kuai'>
+    <text>{{jifen}}积分可抵扣1元</text>
+
+    <checkbox-group data-yongid="{{checked?1:2}}" name="yongid" bindchange="checkboxChange">
+      <label class="checkbox">
+        <checkbox value="" checked="{{checked}}" />
+      </label>
+    </checkbox-group>
+  </view>
+  <view class='hui'></view>
+  <view class='di'>
+    <view class='he'>合计金额：
+      <text>{{gou==1?zui_qian:new_j}}</text> </view>
+    <view class='zhi' bindtap='zhifu'>立即支付</view>
+  </view>
+</view>

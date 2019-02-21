@@ -1,0 +1,78 @@
+/* pages/gongxu/gongxu.wxss */
+
+.gx_ul{
+  width: 96%;
+  margin-left: 4%;
+  
+}
+.gx_ul .gx_li{
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #E9E9E9;
+  display: flex;
+  align-items: center;
+}
+.gx_ul .gx_li input{
+  display: block;
+  font-size: 28rpx;
+  color: #CACACA;
+  width: 50%;
+}
+
+.gx_ul .gx_li .placeholder{
+  font-size: 28rpx;
+  color: #CACACA;
+  letter-spacing: -0.4px;
+  text-align: left;
+}
+.gx_ul .gx_li text{
+  /* width: 15%; */
+  font-size: 30rpx;
+  color: #272727;
+  letter-spacing: -0.43px;
+  text-align: left;
+  margin-right: 50rpx;
+}
+
+.gx_ul .gx_li view{
+  margin-left: 50rpx;
+  width: 172rpx;
+  height: 68rpx;
+  border: 1px solid #C0A369;
+  border-radius: 8px;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 68rpx;
+  color: #C0A369;
+}
+
+.gx_ul textarea{
+  width: 960%;
+  margin: 40rpx auto 0;
+  /* border-bottom: 1px solid  #E9E9E9; */
+  font-size: 28rpx;
+  color: #CACACA;
+  letter-spacing: -0.4px;
+  height: 264rpx;
+}
+
+.gx_ul .shi{
+  width: 100%;
+}
+
+.gx_ul .shi image{
+  width: 157rpx;
+  height: 158rpx;
+  margin: 0 0 52rpx 14rpx;
+}
+
+button{
+  width: 682rpx;
+  margin: 0 0 71rpx;
+  background: #242424;
+  border: 1px solid #979797;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #ECECEC;
+}

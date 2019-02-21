@@ -1,0 +1,44 @@
+/* pages/chong/chong.wxss */
+.da{
+  width: 92%;
+  margin: auto;
+}
+.da .wen{
+  font-size: 34rpx;
+  padding: 20rpx 0;
+  box-sizing: border-box;
+}
+.da .jin{
+  width: 683rpx;
+  height: 99rpx;
+  line-height: 99rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  border: 1px solid #C0A369;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+}
+
+.da .jin text:nth-of-type(1){
+  font-size: 30rpx;
+}
+.da .jin text:nth-of-type(2){
+  font-size: 34rpx;
+  color: #C0A369 ;
+}
+.active{
+  background: #FDF9F2;
+}
+.chong{
+  width: 682rpx;
+  height: 90rpx;
+  background: #242424;
+  color: white;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin: 140rpx auto;
+  border-radius: 5px;
+}

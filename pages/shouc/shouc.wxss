@@ -1,0 +1,326 @@
+/* pages/shouc/shouc.wxss */
+
+.top {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  z-index: 10;
+}
+
+.xian {
+  width: 100%;
+  height: 22rpx;
+  background: #f5f5f5;
+}
+
+/**index.wxss**/
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #e8e8e8;
+  text-align: center;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  /* width: 20%; */
+  color: #000;
+  font-weight: bold;
+}
+
+.on {
+  border-bottom: 5rpx solid #c0a369;
+}
+
+.swiper-box {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 102rpx;
+  margin-bottom: 40rpx;
+  z-index: 1;
+}
+
+.swiper-box swiper-item {
+  position: relative;
+}
+
+.zong {
+  width: 100%;
+  padding: 0 0 0 4%;
+  box-sizing: border-box;
+  height: 196rpx;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.shixiao {
+  width: 116rpx;
+  height: 113rpx;
+  z-index: -1;
+}
+
+.zong .da {
+  display: flex;
+  justify-content: space-between;
+}
+
+.zong .da .le view {
+  width: 117rpx;
+  height: 117rpx;
+}
+
+.zong .da .ri {
+  width: 80%;
+}
+
+.zong .da .ri .shang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+}
+
+.zong .da .ri .shang text:nth-of-type(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  color: #c0a369;
+  letter-spacing: 1.78px;
+  margin-top: 20rpx;
+  width: 257rpx;
+}
+
+.zong .da .ri .shang text:nth-of-type(2) {
+  font-size: 28rpx;
+  color: #b5b5b5;
+  margin-right: 2%;
+  margin-top: 20rpx;
+}
+
+.zong .da .ri .xia {
+  font-size: 30rpx;
+  color: #606060;
+}
+
+.xiao {
+  width: 100%;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+}
+
+.xiao image {
+  width: 94rpx;
+  height: 33rpx;
+  float: right;
+}
+
+.mei {
+  width: 46%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: 50rpx;
+  left: 27%;
+}
+
+.mei text {
+  font-size: 24rpx;
+  color: #cecece;
+  letter-spacing: 1.48px;
+  display: block;
+  margin: 150rpx 20rpx;
+}
+
+.mei view {
+  width: 58rpx;
+  height: 2rpx;
+  background: #cecece;
+}
+
+.lv_ul {
+  width: 96%;
+  margin-left: 4%;
+  height: 334rpx;
+  border-bottom: 1px solid #f5f5f5;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.shixiao_er {
+  width: 116rpx;
+  height: 113rpx;
+  top: 0;
+  right: 0;
+  position: absolute;
+}
+
+.lv_li {
+  width: 100%;
+  display: flex;
+  /* box-shadow: 0 3px 7px 1px rgba(188,188,188,0.50); */
+  align-items: center;
+  margin-top: 20rpx;
+}
+
+.lv_li .tu {
+  width: 35%;
+  height: 259rpx;
+}
+
+.lv_li .tu view {
+  width: 100%;
+  height: 100%;
+}
+
+.lv_li .wen {
+  width: 60%;
+  margin-left: 5%;
+}
+
+.lv_li .wen text {
+  display: block;
+  font-size: 26rpx;
+  color: #8b8b8b;
+  margin-top: 10rpx;
+}
+
+.lv_li .wen text:nth-of-type(1) {
+  font-size: 30rpx;
+  color: #292929;
+}
+
+.lv_li .wen text:nth-of-type(2) {
+  color: #c0a369;
+}
+
+.shai {
+  width: 100%;
+  border-bottom: 1rpx solid #f5f5f5;
+  padding: 0 0 30rpx 2.5%;
+  box-sizing: border-box;
+}
+
+.shai .shai_top {
+  width: 100%;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  text-align: center;
+}
+
+.shai .shai_top .touxiang {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.shai .shai_top .you {
+  width: 76%;
+  margin-left: 30rpx;
+  padding-right: 4%;
+  box-sizing: border-box;
+}
+
+.shai .shai_top .you_y {
+  width: 83%;
+  margin-left: 30rpx;
+  padding-right: 4%;
+  box-sizing: border-box;
+}
+
+.shai .shai_top .shang {
+  width: 100%;
+  text-align: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shai .shai_top .shang .nickname {
+  display: flex;
+  align-items: center;
+}
+
+.shai .shai_top .shang .nickname text {
+  font-size: 30rpx;
+  color: #555;
+}
+
+.shai .shai_top .shang .nickname image {
+  width: 80rpx;
+  height: 35rpx;
+  margin-left: 10rpx;
+}
+
+.shai .shai_top .shang .jiage {
+  color: #c0a369;
+  font-size: 30rpx;
+  text-align: right;
+}
+
+.shai .shai_top .wen {
+  font-size: 24rpx;
+  color: #ababab;
+  text-align: left;
+  width: 100%;
+}
+
+.zhi .tu {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  margin: 20rpx auto;
+}
+
+.zhi .tu image {
+  width: 228rpx;
+  height: 228rpx;
+  margin-left: 6rpx;
+  margin-top: 10rpx;
+}
+
+.shai .di {
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #ababab;
+  padding-right: 4%;
+  box-sizing: border-box;
+}
+
+.shai .di image {
+  width: 94rpx;
+  height: 30rpx;
+}
+
+.shai  .shou {
+  width: 100%;
+  font-size: 32rpx;
+}
+
+.shai .shou image {
+  width: 80rpx;
+  height: 33rpx;
+}
+
+.chongzhi {
+  width: 100%;
+  margin-top: 200rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.chongzhi view {
+  margin-top: 30rpx;
+}

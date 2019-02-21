@@ -1,0 +1,28 @@
+<!--pages/serch/serch.wxml-->
+<!-- <text>pages/serch/serch.wxml</text> -->
+<view class='da_serch'>
+  <view class='serch'>
+  <view class='le'>
+    <image src='../../img/serch.png' />
+  </view>
+  <view class='ri'>
+    <input placeholder='输入搜索您想要的物品' type='text' bindinput="voteTitle" value="{{voteTitle}}" />
+  </view>
+</view>
+</view>
+<view class='lv_ul'>
+  <view class='lv_li' wx:for="{{chanpin}}" wx:for-index="idx" wx:for-item="cell" wx:key="idx" id="{{cell.id}}" bindtap="shopXiang">
+    <view class='tu'>
+      <image src='{{cell.img[0]}}' />
+    </view>
+    <view class='wen'>
+      <text>{{cell.goods_name}}9折优惠</text>
+      <text>价格:￥{{cell.goods_price}}</text>
+      <text>品牌：{{cell.brand_name}}</text>
+      <text>型号：{{cell.goods_model}}</text>
+      <text>条码：{{cell.goods_barcode}}</text>
+      <text>商家：{{cell.shop_name}}</text>
+    </view>
+    <image src='{{cell.goods_type==1?"/img/zheng.png":"/img/qing.png"}}' class='zheng'></image>
+  </view>
+</view>

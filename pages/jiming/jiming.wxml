@@ -1,0 +1,11 @@
+<!--pages/jiming/jiming.wxml-->
+<!-- <text>pages/jiming/jiming.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml"/>
+<!-- <view class='yi'>{{content.content}}</view> -->
+<view>
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/>
+</view>
+
+<view class='tu'>
+  <image src='{{content.img}}'/>
+</view>

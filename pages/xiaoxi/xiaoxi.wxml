@@ -1,0 +1,67 @@
+<!--pages/xiaoxi/xiaoxi.wxml-->
+<!-- <text>pages/xiaoxi/xiaoxi.wxml</text> -->
+
+<import src="../../wxParse/wxParse.wxml" />
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}" data-tid="{{idx}}" bindtap="swichNav" wx:for="{{navtab}}" wx:key="index" wx:for-index="idx">{{item}}</view>
+</view>
+
+<view class="swiper-box">
+
+  <view wx:if="{{currentTab==0}}" class="swiper-item">
+    <view class='da'>
+
+      <view class='da_da' wx:for="{{xiaoxi}}" wx:key="index" bindtap='notice_detail' data-id="{{item.id}}" data-title="{{item.notice_title}}">
+        <view class='time'>
+          <text>{{item.notice_create_time}}</text>
+        </view>
+        <view class='con'>
+          <view class='shang'>
+            <image src='{{item.img}}' mode="aspectFill" />
+          </view>
+          <view class='xia'>
+            <view>{{item.notice_title}}</view>
+
+            <!-- <template is="wxParse" data="{{wxParseData:item.notice_content}}"/> -->
+          </view>
+          <view class='del_del'>
+            <view catchtap='del_detail' data-id="{{item.id}}" class='del'>删除</view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+
+  <view wx:if="{{currentTab==1}}" class="swiper-item">
+
+    <view class='shai' wx:for="{{dope}}" wx:key="index">
+      <view class='shai_top'>
+        <image src='{{item.user_img}}' class='touxiang' />
+        <view style='width:62%;text-align:left;'>
+          <view>
+            <text style="font-size:30rpx; color:#555555 ;">{{item.user_nickname}}</text>
+            <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:10rpx;" />
+          </view>
+          <view style="font-size: 30rpx;color: #C0A369;">回复了你</view>
+        </view>
+        <!-- <navigator url='../zitiex/zitiex'> -->
+        <view class='see' bindtap='see' data-id="{{item.forum_id}}">查看</view>
+        <!-- </navigator> -->
+
+      </view>
+      <view class='zhi' style="width:100%;">
+        <view class='hui'>
+          <view class='shou'>
+            {{item.content}}
+          </view>
+        </view>
+        <view class='di' bindtap='shanchu' data-id="{{item.id}}">
+          <image src='../../img/shan.png' />
+        </view>
+      </view>
+      <view class='xian'></view>
+    </view>
+  </view>
+</view>

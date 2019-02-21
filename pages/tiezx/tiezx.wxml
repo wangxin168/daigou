@@ -1,0 +1,81 @@
+<!--pages/tiezx/tiezx.wxml-->
+<!-- <text>pages/tiezx/tiezx.wxml</text> -->
+<view class='shai' wx:for="{{tiezx.data}}" wx:key="index">
+  <view class='shai_top'>
+    <image src='{{item.user_img}}' class='touxiang' />
+    <view style='width:63%;text-align:left;'>
+      <view>
+        <text style="font-size:30rpx; color:#555555 ;">{{item.user_nickname}}</text>
+        <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:20rpx;" />
+      </view>
+      <view style="font-size:24rpx; color:#ABABAB  ;">{{item.forum_create_time}}</view>
+    </view>
+    <view style='width:20%;color:#C0A369;font-size:30rpx'>浏览{{item.forum_num}}</view>
+  </view>
+</view>
+
+<view class='jieshao' wx:for="{{tiezx.data}}" wx:key="index">
+  <view>
+    <view>￥</view>
+    <view>{{item.forum_price}}</view>
+  </view>
+  <text>{{item.forum_title}}</text>
+  <text>类别：{{item.type_name}}</text>
+  <text>品牌：{{item.brand_name}}</text>
+  <text style='margin-bottom:25rpx;'>地址：{{item.forum_address}}</text>
+</view>
+
+<view class='xian'></view>
+<view class='youhui' wx:for="{{tiezx.data}}" wx:key="index">
+  <view>
+    <image src='../../img/miaoshu.png' />
+  </view>
+  <text>{{item.forum_content}}</text>
+</view>
+
+<view class='tu' wx:for="{{tiezx.data}}" wx:key="index">
+  <image wx:for="{{item.f_img}}" wx:for-item="cell" wx:key="index" src='{{cell}}' mode="widthFix" bindtap="imgYu" data-list="{{item.f_img}}" data-src="{{cell}}"/>
+</view>
+<view class='youhui' wx:if="{{yincang!=0}}" style='margin: 40rpx auto 0;'>
+  <view>
+    <image src='../../img/yonghu.png' />
+  </view>
+</view>
+<!-- 评论列表 -->
+<view style='margin-bottom:90rpx;'>
+  <view class='ping' wx:for="{{pinglie}}" wx:key="index">
+  <view class='ping_le'>
+    <image src='{{item.user_img}}' />
+  </view>
+  <view class='ping_ri'>
+    <view class='nick'>
+      <text style='font-size:28rpx; color:#9F9F9F ;'>{{item.user_nickname}}</text>
+      <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:20rpx;"/>
+    </view>
+    <view class='wen'>
+      {{item.content}}
+    </view>
+    <view class='tu'>
+      <image wx:for="{{item.c_img}}" wx:for-item="cell" wx:key="index" src='{{cell}}' mode="aspectFill" bindtap="imgYu" data-list="{{item.c_img}}" data-src="{{cell}}"></image>
+    </view>
+    <view class='time'>
+      {{item.createtime}}
+    </view>
+  </view>
+</view>
+</view>
+
+<view class='di' wx:for="{{tiezx.data}}" wx:key="index">
+  <view class='shouc'>
+    <image src='{{tiezx.is_shoucang==0?"/img/shou.png":"/img/yishou.png"}}' bindtap='shouCang' />
+  </view>
+  <view class='shouc'>
+    <button open-type='share'>
+      <image src='../../img/fenxiang.png' />
+    </button>
+  </view>
+  <view style='border-right:none' class='shouc' bindtap='ping' data-idd="{{item.id}}">
+    <image src='../../img/pinglun.png' />
+  </view>
+</view>
+<view style='width:100%;height:1rpx;background:white' wx:if="{{chang==1}}"></view>

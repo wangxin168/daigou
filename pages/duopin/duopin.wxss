@@ -1,0 +1,24 @@
+/* pages/duopin/duopin.wxss */
+
+.duopin_ul{
+  width: 96%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+.duopin_ul .duopin_li{
+  margin-top: 42rpx;
+  width: 33.3%;
+  text-align: center;
+}
+.duopin_ul .duopin_li .tu{
+  width: 230rpx;
+  height: 230rpx;
+  margin: auto;
+}
+.duopin_ul .duopin_li .wen{
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}

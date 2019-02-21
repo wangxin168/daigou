@@ -1,0 +1,17 @@
+<!--pages/shangquan/shangquan.wxml-->
+<!-- <text>pages/shangquan/shangquan.wxml</text> -->
+
+<view class='xuanze'>
+  <view class='quan'>
+    <image src='../../img/shangquan.png'/>
+  </view>
+  <view>
+    请选择商圈
+  </view>
+</view>
+
+<view class='quan_ul' >
+  <view class='quan_li' wx:for="{{shop_name}}" wx:key="{{index}}" bindtap="tapName" id="{{index}}" data-shop_id="{{item.id}}">
+    {{item.shop_name}}
+  </view>
+</view>

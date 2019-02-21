@@ -1,0 +1,86 @@
+/* pages/zhifu/zhifu.wxss */
+page{
+  overflow: hidden;
+}
+.kuai{
+  width: 92%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  height: 94rpx;
+  align-items: center;
+  border-top: 1px solid #F5F5F5;
+}
+.kuai text:nth-of-type(1){
+  font-size: 32rpx;
+}
+.kuai text:nth-of-type(2){
+  font-size: 30rpx;
+}
+.kuai text checkbox{
+  width: 50rpx;
+  height: 50rpx;
+}
+.xian{
+  width: 100%;
+  height: 22rpx;
+  background: #F5F5F5;
+}
+.hui{
+  width: 100%;
+  height: 1200rpx;
+  background: #F5F5F5;
+  z-index: 1;
+}
+.di{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 105rpx;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: white;
+}
+.di .he{
+  margin-left: 20rpx;
+}
+.di .he text{
+  color: #C0A369;
+}
+.di .zhi{
+  width: 220rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 105rpx;
+  background: #F1B22F;
+  color: white;
+}
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   width: 40rpx; /* 背景的宽 */
+   height: 40rpx; /* 背景的高 */
+   color:#000;
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked{
+   border: none;
+   background: red;
+   color:#000;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .x .wx-checkbox-input.wx-che-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 40rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 40rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+   color:#000;
+}

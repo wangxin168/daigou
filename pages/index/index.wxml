@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<loading hidden="{{img && notice_title && type_name && zhekou}}">
+  加载中...
+</loading>
+<view class="container">
+  <view class='haiwai'>
+    <!-- 通知 -->
+    <view class='tongzhi'>
+      <view class='laba'>
+        <image src='../../img/laba.png' />
+      </view>
+      <view class='xian'></view>
+      <!-- 通知 -->
+
+      <swiper class="tongzhi_con" vertical="true" autoplay="true" circular="true" interval="2000" circular="true">
+        <block wx:for="{{notice_title}}" wx:key="index">
+          <!-- <navigator url='../xiaoxi/xiaoxi' open-type="navigate"> -->
+          <swiper-item style="height:97rpx;" bindtap="xiaoxi" data-id="{{item.id}}" data-title="{{item.notice_title}}">
+            <view class="swiper_item" style=" width: 100%; height: 80rpx; display: inline-block;margin-left:28rpx;">{{item.notice_title}}</view>
+          </swiper-item>
+          <!-- </navigator> -->
+        </block>
+      </swiper>
+
+    </view>
+
+    <!-- 轮播 -->
+    <view class='banner'>
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="true" indicator-dots="true" indicator-active-color="white">
+        <block wx:for="{{img}}" wx:key="{{index}}">
+          <swiper-item>
+            <image src="{{item.img}}" class="slide-image" height="150" mode="aspectFill" bindtap='zheKou' data-id="{{item.id}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- 折扣信息 -->
+    <view class='zhekou'>
+      <view class='kong'></view>
+      <view class='zhekou_con'>
+        <view style='transform: rotate(20deg);color: #E3E3E3;'>/</view>
+        <view>折扣信息</view>
+        <view style='transform: rotate(20deg);color: #E3E3E3;'>/</view>
+      </view>
+      <!-- 点击跳转搜索 -->
+      <!-- <navigator url='../serch/serch'> -->
+      <view class='serch' bindtap='sousuo'>
+        <view class='serch_tu'>
+          <image src='../../img/serch.png' />
+          <view>搜索</view>
+        </view>
+      </view>
+      <!-- </navigator> -->
+
+    </view>
+    <van-tabs active="{{ active }}" bind:click="swichNav">
+      <van-tab wx:for="{{type_name}}" wx:key="{{item.id}}" title="{{item.type_name}}">
+        <view class="swiper-box" duration="300" wx:if="{{list_none!=0||chongzhi!=0}}">
+          <view class="swiper-item" wx:for="{{zhekou}}" wx:key="{{index}}">
+            <view class='chanpin_ul' bindtap="zheKou" data-id="{{item.id}}">
+              <view class='chanpin_li'>
+                <view class='tu'>
+                  <image src='{{item.img}}' />
+                </view>
+                <view class='wen'>
+                  <view class='shang'>
+                    <view>{{item.discount_title}}</view>
+                    <view>{{item.discount_create_time}}</view>
+                  </view>
+                  <view class='xia'>{{item.discount_title_fu}}</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{chongzhi==0}}" class='chongzhi'>
+          <view>您不是会员</view>
+          <view>充值后才可查看相关数据</view>
+        </view>
+        <view class='chongzhi' wx:if="{{list_none==0}}">
+          <view>该分类下无商品</view>
+        </view>
+      </van-tab>
+    </van-tabs>
+
+    <!-- tab  切换 -->
+    <!-- <scroll-view scroll-x class="swiper-tab" scroll-left="{{scrollLeft}}" scroll-with-animation='true'>
+      <view class="swiper-tab-list" wx:for="{{type_name}}" wx:key="{{item.id}}">
+        <view class="center {{currentTab==item.id-1 ? 'on' : ''}}" data-current="{{item.id-1}}" data-tid="{{item.id}}" bindtap="swichNav" wx:key="{{item.id}}">{{item.type_name}}</view>
+      </view>
+    </scroll-view>
+
+    <view current="{{currentTab}}" circular="" class="swiper-box" duration="300" wx:if="{{list_none!=0||chongzhi!=0}}">
+      <view class="swiper-item" wx:for="{{zhekou}}" wx:key="{{index}}">
+        <view class='chanpin_ul' bindtap="zheKou" data-id="{{item.id}}">
+          <view class='chanpin_li'>
+            <view class='tu'>
+              <image src='{{item.img}}' />
+            </view>
+            <view class='wen'>
+              <view class='shang'>
+                <view>{{item.discount_title}}</view>
+                <view>{{item.discount_create_time}}</view>
+              </view>
+              <view class='xia'>{{item.discount_title_fu}}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{chongzhi==0}}" class='chongzhi'>
+      <view>您不是会员</view>
+      <view>充值后才可查看相关数据</view>
+    </view>
+    <view class='chongzhi' wx:if="{{list_none==0}}">
+      <view>该分类下无商品</view>
+    </view> -->
+  </view>
+
+</view>

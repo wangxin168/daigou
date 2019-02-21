@@ -1,0 +1,37 @@
+<!--pages/gongxu/gongxu.wxml-->
+<!-- <text>pages/gongxu/gongxu.wxml</text> -->
+<form bindsubmit="bindFormSubmit">
+  <view class='gx_ul'>
+    <view class='gx_li'>
+      <input placeholder-class="placeholder" placeholder="标题 请输入标题品牌品类都是大家喜欢搜索的" type="text" style='width:100%' name="biaoti" />
+    </view>
+    <view class='gx_li'>
+      <text>价格</text>
+      <input placeholder-class="placeholder" placeholder="请输入价格" type="number" name="jiage" value='{{siliao}}' />
+      <view bindtap='siliao' name="siliao">私聊价格</view>
+    </view>
+    <view class='gx_li'>
+      <text>分类</text>
+      <input placeholder-class="placeholder" placeholder="请输入类型 如：服装" type="text" name="fenlei" />
+    </view>
+    <view class='gx_li'>
+      <text>品牌</text>
+      <input placeholder-class="placeholder" placeholder="请输入品牌" type="text" name="pinpai" />
+    </view>
+    <view class='gx_li'>
+      <text>交易地址</text>
+      <input placeholder-class="placeholder" placeholder="请输入期望交易地址" type="text" name="dizhi" />
+    </view>
+
+    <textarea placeholder="请输入您想写的评论..." name="textarea" />
+    <view class='shi'>
+      <image src='../../img/shizi.png' bindtap='up_img' name="up_img" />
+      <image wx:for="{{tempFilePaths}}" wx:key="index" src='{{item}}' name="pic" mode="aspectFill" />
+
+      <input hidden name="pic" value="{{tempFilePaths}}"></input>
+    </view>
+
+    <button form-type="submit"> 发布求购 </button>
+
+  </view>
+</form>

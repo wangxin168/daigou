@@ -1,0 +1,176 @@
+/* pages/xiaoxi/xiaoxi.wxss */
+
+/**index.wxss**/
+
+.swiper-tab {
+  width: 100%;
+  border-bottom: 2rpx solid #e8e8e8;
+  text-align: center;
+  line-height: 80rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  /* width: 20%; */
+  color: #000;
+  font-weight: bold;
+}
+
+.on {
+  border-bottom: 5rpx solid #c0a369;
+}
+
+.da {
+  width: 100%;
+  background: #f8f8f8;
+  overflow: hidden;
+  padding: 0 0 50rpx 0;
+}
+
+.da .time {
+  width: 190rpx;
+  height: 37rpx;
+  margin: 20rpx auto;
+  background: #e8e8e8;
+  border-radius: 6rpx;
+  font-size: 28rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.con {
+  width: 94%;
+  /* height: 383rpx; */
+  margin: auto;
+  background: white;
+  padding: 0 0 40rpx 0;
+  box-sizing: border-box;
+}
+
+.con .shang {
+  width: 100%;
+  height: 282rpx;
+}
+
+.con .shang image {
+  width: 100%;
+  height: 100%;
+}
+
+.con .xia view:nth-of-type(1) {
+  padding: 0 20rpx;
+  font-size: 34rpx;
+  color: #424242;
+  margin-top: 28rpx;
+}
+
+.con .xia view:nth-of-type(2) {
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  color: #a9a9a9;
+  margin: 8rpx 0;
+}
+
+.shai {
+  width: 100%;
+  margin: auto;
+}
+
+.shai .shai_top {
+  padding: 0 4%;
+  box-sizing: border-box;
+  height: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.shai .shai_top .touxiang {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.shai .shai_top .see {
+  width: 101rpx;
+  height: 53rpx;
+  line-height: 53rpx;
+  font-size: 26rpx;
+  color: #7a7a7a;
+  background: #fdfdfd;
+  border: 1px solid #cdcdcd;
+}
+
+.zhi .hui {
+  width: 100%;
+  padding: 0 4%;
+  margin: auto;
+  background: #f7f7f7;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.zhi .tu {
+  width: 100%;
+  margin: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zhi .tu image {
+  width: 228rpx;
+  height: 228rpx;
+  margin: 10rpx 0;
+}
+
+.zhi .di {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 26rpx;
+  color: #ababab;
+  margin: 40rpx 0;
+}
+
+.zhi .di image {
+  width: 100rpx;
+  height: 30rpx;
+  margin: auto;
+}
+
+.zhi .shou {
+  width: 100%;
+  font-size: 32rpx;
+  margin: 20rpx 0;
+}
+
+.zhi .shou image {
+  width: 80rpx;
+  height: 33rpx;
+}
+
+.xian {
+  width: 100%;
+  height: 22rpx;
+  background: #f8f8f8;
+}
+.del_del{
+  width: 100%;
+  display: flex;
+}
+.del_del .del {
+  text-align: center;
+  box-sizing: border-box;
+  width: 101rpx;
+  height: 53rpx;
+  line-height: 53rpx;
+  font-size: 26rpx;
+  color: #7a7a7a;
+  border: 1rpx solid #cdcdcd;
+  margin-left: 84%;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,81 @@
+/* pages/serch/serch.wxss */
+.serch{
+  margin: 20rpx auto 0;
+  width: 92%;
+  height: 97rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  box-shadow:0 4rpx 32rpx 3px rgba(207,207,207,0.50);
+  border-radius: 3px;
+  position: fixed;
+  top: 0;
+  left: 4%;
+  background: white;
+}
+.serch .le{
+  width: 15%;
+  text-align: center;
+  line-height: 27rpx;
+}
+.serch .le image{
+  width: 35%;
+  height: 35rpx;
+}
+.serch .ri{
+  width: 85%;
+}
+.serch .ri input{
+  font-size: 16px;
+}
+.serch .ri .placeholder{
+  font-size: 30rpx;
+color: #A7A7A7;
+}
+.chanpin_ul{
+  width: 94%;
+  margin: 140rpx auto 0;
+}
+.chanpin_ul .chanpin_li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F4F4F4;
+  padding: 10rpx;
+  box-sizing: border-box;
+  margin-top: 20rpx;
+}
+.chanpin_ul .chanpin_li .tu{
+  width: 18%;
+  height: 117rpx;
+  text-align: center;
+}
+.chanpin_ul .chanpin_li .tu image{
+  width: 117rpx;
+  height: 117rpx;
+}
+.chanpin_ul .chanpin_li .wen{
+  width: 80%;
+  padding: 0 10px;
+}
+.chanpin_ul .chanpin_li .wen .shang{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  padding: 10rpx 0;
+}
+.chanpin_ul .chanpin_li .wen .shang view:nth-of-type(1){
+  color: #C0A369;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 345rpx;
+}
+.chanpin_ul .chanpin_li .wen .shang view:nth-of-type(2){
+  color: #B5B5B5;
+}
+.chanpin_ul .chanpin_li .wen .xia{
+  font-size: 30rpx;
+}

@@ -1,0 +1,83 @@
+/* pages/ziliao/ziliao.wxss */
+.touxiang{
+  width: 92%;
+  /* margin: auto; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10rpx auto 40rpx;
+}
+.touxiang view{
+  border-radius: 50%;
+}
+.touxiang view image{
+  width: 118rpx;
+  height: 118rpx;
+  display: block;
+  border-radius: 50%;
+}
+.touxiang text{
+  font-size: 30rpx;
+}
+.xian{
+  width: 100%;
+  height: 22rpx;
+  background: #F5F5F5 ;
+}
+.ziliao_ul{
+  width: 96%;
+  margin-left: 4%;
+
+}
+.ziliao_ul .ziliao_li{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100rpx;
+  align-items: center;
+  border-bottom: 1px solid #ECECEC;
+}
+.ziliao_ul .ziliao_li .left{
+  width: 120rpx;
+}
+
+.ziliao_ul .ziliao_li .right{
+  font-size:24rpx; 
+  color:#9A9A9A; 
+  width:400rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ziliao_ul .ziliao_li .right .le{
+  margin-right:20rpx;
+  width:345rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: block;
+  text-align: right;
+}
+
+.cun{
+  width: 96%;
+  height: 90rpx;
+  background: #242424;
+  color: white;
+  text-align: center;
+  line-height: 90rpx;
+  margin: 100rpx 0;
+  border-radius: 5px;
+  padding: 0 4% 0 0;
+  box-sizing: border-box;
+}
+.chongzhi{
+  width: 100%;
+  margin-top: 300rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.chongzhi view{
+  margin-top: 30rpx;
+}

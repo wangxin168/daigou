@@ -1,0 +1,30 @@
+<!--pages/jifen/jifen.wxml-->
+<!-- <text>pages/jifen/jifen.wxml</text> -->
+
+<!-- <navigator url='../jiming/jiming'> -->
+  <view class='jifen' bindtap='jiming'>
+    <image src='/img/jifenbei.png' class='beijing_tu'></image>
+    <text class='ji' wx:if="{{chongzhi!=0}}">{{jifenfen}}</text>
+    <text class='ji' wx:if="{{chongzhi==0}}">0</text>
+  </view>
+<!-- </navigator> -->
+
+<view class='mei'>
+  <view class='mingx'>
+    <view></view>
+    <text>积分明细</text>
+    <view></view>
+  </view>
+</view>
+
+<view class='qian' wx:for="{{jifen}}" wx:key="index">
+  <view class='shang'>
+    <text>{{item.type==1?"签到送积分":"成功分享了信息"}}</text>
+    <text>+{{item.score}}</text>
+  </view>
+  <view class='xia'>{{item.create_time}}</view>
+</view>
+<view wx:if="{{chongzhi==0}}" class='chongzhi'>
+  <view>您不是会员</view>
+  <view>充值后才可查看相关数据</view>
+</view>

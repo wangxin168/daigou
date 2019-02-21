@@ -1,0 +1,85 @@
+/* pages/serch/serch.wxss */
+.da_serch{
+  width:100%;
+  height:130rpx;
+  background:white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.serch{
+  width: 92%;
+  height: 97rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  box-shadow:0 4rpx 32rpx 3px rgba(207,207,207,0.50);
+  border-radius: 3px;
+  margin: 20rpx auto 0;
+}
+.serch .le{
+  width: 15%;
+  text-align: center;
+  line-height: 27rpx;
+}
+.serch .le image{
+  width: 35%;
+  height: 35rpx;
+}
+.serch .ri{
+  width: 85%;
+}
+.serch .ri input{
+    font-size: 16px;
+}
+
+.lv_ul{
+  width: 94%;
+  margin: 140rpx auto 20rpx;
+  background: #fff;
+  z-index: 1;
+}
+.lv_ul .lv_li{
+  width: 100%;
+  display: flex;
+  height: 294rpx;
+  box-shadow: 0 3px 7px 1px rgba(188,188,188,0.50);
+  align-items: center;
+  margin-top: 20rpx;
+  position: relative;
+}
+.lv_ul .lv_li .tu{
+  width: 40%;
+}
+.lv_ul .lv_li .tu image{
+  width: 271rpx;
+  height: 259rpx;
+}
+.lv_ul .lv_li .wen{
+  width: 60%;
+  
+}
+.lv_ul .lv_li .wen text{
+  display: block;
+  font-size: 26rpx;
+  color: #8B8B8B;
+  margin-top: 10rpx;
+}
+.lv_ul .lv_li .wen text:nth-of-type(1){
+  font-size: 30rpx;
+  color: #292929;
+}
+.lv_ul .lv_li .wen text:nth-of-type(2){
+  color: #C0A369;
+}
+.zuo{
+  display: flex;
+}
+.lv_ul .lv_li .zheng{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80rpx;
+  height: 80rpx;
+}

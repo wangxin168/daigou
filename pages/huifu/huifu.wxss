@@ -1,0 +1,20 @@
+/* pages/huifu/huifu.wxss */
+
+.section textarea{
+  width: 70%;
+  margin: 40rpx auto 200rpx;
+  border-bottom: 1px solid  #E9E9E9;
+  font-size: 30rpx;
+  color: #CBCBCB;
+  height: 264rpx;
+}
+
+button{
+  width: 86%;
+  margin: auto;
+  background: #242424;
+  border: 1px solid #979797;
+  border-radius: 8rpx;
+  font-size: 30rpx;
+  color: #ECECEC;
+}

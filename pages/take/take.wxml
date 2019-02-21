@@ -1,0 +1,137 @@
+<loading hidden="{{zhiding && zhidings && luntan&& luntans}}">
+  加载中...
+</loading>
+<view class='han' style='min-height:{{winHeight}}px'>
+  <view class='top'>
+    <navigator url='../serchsan/serchsan' class='sou'>
+      <view class='cheng'>
+        <view class='ser'>
+          <image src='../../img/serch.png' />
+        </view>
+        <view class='serch'>搜索您想要的物品</view>
+      </view>
+    </navigator>
+
+    <!-- tab  切换 -->
+    <view class="swiper-tab">
+      <view class="swiper-tab-list {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}" data-tid="{{idx}}" bindtap="swichNav" wx:for="{{navtab}}" wx:key="index" wx:for-index="idx">{{item}}</view>
+    </view>
+  </view>
+
+  <view class="swiper-box">
+
+    <view class="swiper-item" wx:if="{{currentTab==0}}">
+      <!-- 置顶 -->
+      <view class='shai'>
+        <view class='zhi' bindtap='zhiDing' id='{{zhiding.id}}' wx:if="{{chongzhi!=0 && yincang!=0}}" style='width:100%;'>
+          <view class='shou'>
+            <image src='../../img/zhiding.png' /> 
+            <view style='margin-left:14rpx;'>{{zhiding.top_title}}</view>
+          </view>
+          <view class='tu'>
+            <image wx:for="{{zhiding.img}}" wx:key="index" src='{{item}}' mode="aspectFill"></image>
+          </view>
+          <view class='di'>
+            <text>浏览{{zhiding.top_num}}</text>
+            <!-- <text>{{zhiding.forum_create_time}}</text> -->
+          </view>
+        </view>
+      </view>
+      <view class='shai' wx:for="{{luntans}}" wx:for-item="cell" wx:key="index" id="{{cell.id}}" bindtap='tiezXiang'>
+        <view class='shai_top'>
+          <image src='{{cell.user_img}}' class='touxiang' />
+          <view class='up'>
+            <view class='nick'>
+              <view class='nick_nick'>
+                <text class='nickname'>{{cell.user_nickname}}</text>
+                <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:10rpx;" />
+              </view>
+              <view style='width:30%;color:#C0A369;font-size:30rpx;text-align:right;'>￥{{cell.forum_price}}</view>
+            </view>
+            <view style="font-size:24rpx; color:#ABABAB;" wx:if="{{cell.day==0&&cell.hores>0}}">{{cell.hores}}小时前</view>
+            <view style="font-size:24rpx; color:#ABABAB;" wx:if="{{cell.day==0&&cell.hores==0}}">{{cell.mint}}分钟前</view>
+            <view style="font-size:24rpx; color:#ABABAB;" wx:if="{{cell.day!=0}}">{{cell.day}}天前</view>
+          </view>
+          
+        </view>
+        <view class='zhi' style="width:100%;">
+          <view class='shou'>
+            {{cell.forum_title}}
+          </view>
+          <view class='tu'>
+            <image wx:for="{{cell.f_img}}" wx:key="index" src="{{item}}" mode="aspectFill"></image>
+          </view>
+          <view class='di'>
+            <text>浏览{{cell.forum_num}}</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="swiper-item" wx:if="{{currentTab==1}}">
+      <!-- 置顶 -->
+      <view class='shai'>
+        <view class='zhi' bindtap='zhiDing' id='{{zhidings.id}}' wx:if="{{chongzhi!=0 && yincang!=0}}" style='width:100%;'>
+          <view class='shou'>
+            <image src='../../img/zhiding.png' /> {{zhidings.top_title}}
+          </view>
+          <view class='tu'>
+            <image wx:for="{{zhidings.img}}" wx:key="index" src='{{item}}' mode="aspectFill"></image>
+          </view>
+          <view class='di'>
+            <text>浏览{{zhidings.top_num}}</text>
+            <!-- <text>{{zhidings.forum_create_time}}</text> -->
+          </view>
+        </view>
+      </view>
+      <view class='shai' wx:for="{{luntan}}" wx:key="index" wx:for-item="cells" id="{{cells.id}}" bindtap='tiezXiang'>
+        <view class='shai_top'>
+          <image src='{{cells.user_img}}' class='touxiang' />
+          <view class='up'>
+            <view class='nick'>
+              <view class='nick_nick'>
+                <text style="font-size:30rpx; color:#555555 ;">{{cells.user_nickname}}</text>
+                <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:10rpx;" />
+              </view>
+              <view style='width:20%;color:#C0A369;font-size:30rpx'>￥{{cells.forum_price}}</view>
+            </view>
+            <view style="font-size:24rpx; color:#ABABAB;" wx:if="{{cells.day==0&&cells.hores>0}}">{{cells.hores}}小时前</view>
+            <view style="font-size:24rpx; color:#ABABAB;" wx:if="{{cells.day==0&&cells.hores==0}}">{{cells.mint}}分钟前</view>
+            <view style="font-size:24rpx; color:#ABABAB;" wx:if="{{cells.day!=0}}">{{cells.day}}天前</view>
+          </view>
+          
+        </view>
+        <view class='zhi' style="width:100%;">
+          <view class='shou'>
+            {{cells.forum_title}}
+          </view>
+          <view class='tu'>
+            <image wx:for="{{cells.f_img}}" wx:key="index" src='{{item}}' mode="aspectFill"></image>
+          </view>
+          <view class='di'>
+            <text>浏览{{cells.forum_num}}</text>
+            <text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='zhe' wx:if="{{display}}" bindtap='dianJi'>
+      <view class='bai'>
+        <view class='wen'>请选择发布消息的类型</view>
+        <view class='tu'>
+          <image src='../../img/qiugou.png' bindtap='qiuGou' />
+          <image src='../../img/chushou.png' bindtap='chuShou' />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{chongzhi==0}}" class='chongzhi'>
+    <view>您不是会员</view>
+    <view>充值后才可查看相关数据</view>
+  </view>
+  <view class='chongzhi' wx:if="{{list_none==0}}">
+    <view>暂无论坛</view>
+  </view>
+  <image src='../../img/fa.png' class='fabu' bindtap="dianJi" />
+</view>

@@ -1,0 +1,9 @@
+<!--pages/quanyi/quanyi.wxml-->
+<!-- <text>pages/quanyi/quanyi.wxml</text> -->
+<import src="../../wxParse/wxParse.wxml"/>
+
+<!-- <view class='yi'>{{content}}</view> -->
+<view class='da'>
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>
+

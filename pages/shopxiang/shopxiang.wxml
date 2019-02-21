@@ -1,0 +1,71 @@
+<loading hidden="{{xiangqing}}">
+  加载中...
+</loading>
+<import src="../../wxParse/wxParse.wxml"/>
+<view class='lunbo' wx:if="{{display!=0}}">
+  <swiper indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='kuang' circular="true" bindchange='changeimg'>
+    <block wx:for="{{xiangqing.data}}" wx:key="index" wx:for-item="xiang">
+      <swiper-item wx:for="{{xiang.img}}" wx:key="index">
+        <image src="{{item}}" class="slide-image" bindtap="imgYu" data-list="{{xiang.img}}" data-src="{{item}}"/>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='lunbo_bot'>
+    <!-- 正价时显示正价图片 -->
+    <view class='zhengjia' wx:if="{{xiangqing.data[0].goods_type==1}}">
+      <image src='/img/zhengjia.png'/>
+    </view>
+    <!-- 清仓时显示清仓图片 -->
+    <view class='zhengjia' wx:if="{{xiangqing.data[0].goods_type!=1}}">
+      <image src='/img/qingc.png'/>
+    </view>
+    <view class='zhishi'>
+      {{activeIndex}}/{{xiangqing.data[0].img.length}}
+    </view>
+  </view>
+</view>
+
+<view class='jieshao' wx:for="{{xiangqing.data}}" wx:key="index">
+  <view class='shang'>
+    <view class='price'>
+      <text>￥</text>
+      <text>{{item.goods_price}}</text>
+    </view>
+    <view class='fenxiang'>
+      <button open-type='share'>
+        <image src='../../img/fenxiang2.png' />
+      </button>
+    </view>
+  </view>
+  <view class='zhong'>
+    {{item.brand_name}}9折优惠
+  </view>
+  <view class='xia'>
+    <image src='{{xiangqing.is_shoucang==0?"/img/shou_none.png":"/img/shou_yes.png"}}' bindtap='shouCang'/>
+  </view>
+</view>
+
+<view class='xian' wx:if="{{display!=0}}"></view>
+
+<view class='xinxi' style='border-bottom: 1px solid #ECECEC ;' wx:for="{{xiangqing.data}}"  wx:key="index">
+  <image src='../../img/xinxi.png'/>
+  <text>品牌：{{item.brand_name}}</text>
+  <text>条码：{{item.goods_barcode}}</text>
+  <text>商圈：{{item.shop_name}}</text>
+  <text>型号:{{item.goods_model}}</text>
+  <text>重量：{{item.goods_weight}}</text>
+  <text>规格：{{item.goods_size}}</text>
+  <text>颜色：{{item.goods_color}}</text>
+</view>
+
+<view class='xinxi' wx:if="{{display!=0}}">
+  <image src='../../img/shopxiang.png'/>
+</view>
+
+<view class='youhui'>
+  <!-- <view>LOUIS VUITTON经典款9折优惠</view> -->
+  <!-- <text wx:for="{{xiangqing}}" wx:key="index">
+  {{item.goods_content}}</text> -->
+  <template is="wxParse" data="{{wxParseData:contents.nodes}}"/> 
+</view>

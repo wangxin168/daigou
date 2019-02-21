@@ -1,0 +1,99 @@
+<!--pages/tiezi/tiezi.wxml-->
+<!-- <text>pages/tiezi/tiezi.wxml</text> -->
+<loading hidden="{{tiezi && tiezis}}">
+  加载中...
+</loading>
+<view class='top'>
+  <view class='xian'></view>
+
+  <!-- tab  切换 -->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}" data-tid="{{idx}}" bindtap="swichNav" wx:for="{{navtab}}" wx:key="index" wx:for-index="idx">{{item}}</view>
+  </view>
+</view>
+
+<view class="swiper-box">
+  <view wx:if="{{currentTab===0}}" class="swiper-item">
+    <view class='shai' wx:for="{{tiezi}}" wx:key="{{index}}">
+      <view class='shai_top' data-id="{{item.id}}" bindtap='zitiex'>
+        <image src='{{item.user_img}}' class='touxiang' />
+        <view style='width:63%;text-align:left;'>
+          <view>
+            <text style="font-size:30rpx; color:#555555 ;">{{item.user_nickname}}</text>
+            <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:20rpx;" />
+          </view>
+          <view style="font-size:24rpx; color:#ABABAB  ;">发布时间：{{item.forum_create_time}}</view>
+        </view>
+        <view style='width:20%;color:#C0A369;font-size:30rpx;text-align:right;'>￥{{item.forum_price}}</view>
+      </view>
+      <view class='zhi' style="width:100%;">
+        <view class='shou'>
+          {{item.forum_title}}
+        </view>
+        <view class='tu'>
+          <image wx:for="{{item.f_img}}" wx:key="index" src='{{item}}' mode="aspectFill"></image>
+        </view>
+        <view class='di'>
+          <text>浏览{{item.forum_num}}</text>
+
+          <view class='da'>
+            <view bindtap='bianji' data-id="{{item.id}}" data-type="{{item.forum_type}}">
+              <text>编辑</text>
+              <image src='../../img/bianji.png' class='bianji' />
+
+            </view>
+            <image src='../../img/shan.png' data-id="{{item.id}}" bindtap='del' />
+          </view>
+
+        </view>
+      </view>
+    </view>
+    <!-- </navigator> -->
+
+  </view>
+
+  <view wx:if="{{currentTab===1}}" class="swiper-item">
+    <!-- <navigator url='../zitiex/zitiex'> -->
+    <view class='shai' wx:for="{{tiezis}}" wx:key="{{index}}">
+      <view class='shai_top' data-id="{{item.id}}" bindtap='zitiex'>
+        <image src='{{item.user_img}}' class='touxiang' />
+        <view style='width:63%;text-align:left;'>
+          <view>
+            <text style="font-size:30rpx; color:#555555 ;">{{item.user_nickname}}</text>
+            <image src='{{img}}' style="width:80rpx;height:35rpx;margin-left:20rpx;" />
+          </view>
+          <view style="font-size:24rpx; color:#ABABAB  ;">发布时间：{{item.forum_create_time}}</view>
+        </view>
+        <view style='width:20%;color:#C0A369;font-size:30rpx;text-align:right;'>￥{{item.forum_price}}</view>
+      </view>
+      <view class='zhi' style="width:100%;">
+        <view class='shou'>
+          {{item.forum_title}}
+        </view>
+        <view class='tu'>
+          <image wx:for="{{item.f_img}}" wx:key="index" src='{{item}}' mode="aspectFill"></image>
+        </view>
+        <view class='di'>
+          <text>浏览{{item.forum_num}}</text>
+          <view class='da'>
+            <view bindtap='bianji' data-id="{{item.id}}" data-type="{{item.forum_type}}">
+              <text>编辑</text>
+              <image src='../../img/bianji.png' class='bianji' />
+
+            </view>
+            <image src='../../img/shan.png' data-id="{{item.id}}" bindtap='deler' />
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- </navigator> -->
+
+  </view>
+  <view wx:if="{{chongzhi==0}}" class='chongzhi'>
+    <view>您不是会员</view>
+    <view>充值后才可查看相关数据</view>
+  </view>
+  <view class='chongzhi' wx:if="{{list_none==0}}">
+    <view>暂无帖子</view>
+  </view>
+</view>

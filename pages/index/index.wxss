@@ -1,0 +1,233 @@
+/**index.wxss**/
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+.tongzhi{
+  margin: 20rpx auto 0;
+  width: 694rpx;
+  height: 80rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  box-shadow:0 4rpx 32rpx 3rpx rgba(207,207,207,0.50);
+  /* border: 1px solid #aaa; */
+  border-radius: 3px;
+}
+.tongzhi .swiper_item{
+  line-height: 80rpx;
+  text-align: left;
+}
+.laba{
+  width: 90rpx;
+  text-align: center;
+  height: 40rpx;
+}
+.laba image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 8rpx;
+}
+.xian{
+  width: 1px;
+  height: 30px;
+  background: #D8D8D8;
+}
+.tongzhi_con{
+  width: 600rpx;
+  text-align: center;
+  font-size: 16px;
+  height: 80rpx;
+}
+.banner{
+  width: 100%;
+  margin-top: 20rpx;
+  height: 300rpx;
+}
+.banner swiper{
+  width: 100%;
+  height: 300rpx!important;
+}
+.banner image{
+  width: 100%;
+  height: 300rpx;
+}
+.zhekou{
+  width: 100%;
+  display: flex;
+  height: 92rpx;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  box-shadow: 0 5rpx 9rpx 0 rgba(235,235,235,0.50);
+}
+.kong{
+  width: 30%;
+  
+}
+.zhekou_con{
+  text-align: center;
+  width: 30%;
+  color: #919191;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: space-around;
+}
+.serch{
+  width: 30%;
+}
+.serch_tu{
+  border: 1px solid #e1e1e1;
+  font-size: 28rpx;
+  margin: auto;
+  width: 150rpx;
+  color: #BFBFBF;
+  height: 52rpx;
+  background: #F6F6F6;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16rpx 16rpx;
+  box-sizing: border-box;
+}
+.serch_tu image{
+  width: 35rpx;
+  height: 35rpx;
+}
+.serch_tu view{
+  height: 52rpx;
+  line-height: 50rpx;
+}
+.hor{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+/**index.wxss**/
+/* .swiper-tab{
+	
+	text-align: center;
+	line-height: 80rpx;
+  display: flex;
+  white-space: nowrap;
+}
+.swiper-tab-list{  
+  font-size: 30rpx;
+  display: inline-block;
+	color: #000;
+  font-weight: bold;
+}
+.swiper-tab-list .center{
+  width:63rpx;
+  margin: auto;
+}
+.on{
+	border-bottom: 5rpx solid #C0A369 ;
+} */
+ 
+.swiper-box{ 
+  display: block;
+  /* height: 100%;  */
+  width: 100%; 
+  overflow: hidden; 
+  margin-top: 12rpx;
+}
+.swiper-box .swiper-item{
+  margin-top: 12rpx;
+}
+.swiper-box .swiper-item .chanpin_ul{
+  width: 94%;
+  margin: auto;
+  
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li{
+  width: 100%;
+  height: 142rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F4F4F4;
+  padding: 10rpx;
+  box-sizing: border-box;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .tu{
+  width: 18%;
+  height: 117rpx;
+  text-align: center;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .tu image{
+  width: 117rpx;
+  height: 117rpx;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .wen{
+  width: 80%;
+  padding: 0 10px;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .wen .shang{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  padding: 0 0 10rpx 0;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .wen .shang view:nth-of-type(1){
+  color: #C0A369;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 32rpx;
+  width: 488rpx;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .wen .shang view:nth-of-type(2){
+  color: #B5B5B5;
+  width: 200rpx;
+  text-align: right;
+  font-size: 28rpx;
+}
+.swiper-box .swiper-item .chanpin_ul .chanpin_li .wen .xia{
+  font-size: 30rpx;
+}
+.chongzhi{
+  width: 100%;
+  margin-top: 100rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+.chongzhi view{
+  margin-top: 30rpx;
+}
+.van-tabs__line{
+  width:34.5390625px!important;
+  left:1px!important;
+  background:#C0A369!important;
+}
+.van-tab__title{
+  color: #000;
+  font-size: 30rpx;
+  font-weight: bold;
+  margin: auto;
+}
+.van-tab{
+  flex-basis:18%!important;
+}
+

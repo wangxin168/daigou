@@ -1,0 +1,110 @@
+<!--pages/shouc/shouc.wxml-->
+<!-- <text>pages/shouc/shouc.wxml</text> -->
+<loading hidden="{{shouc && shangpin && jiaoyi}}">
+  加载中...
+</loading>
+<view class='top'>
+  <view class='xian'></view>
+  <!-- tab  切换 -->
+  <view class="swiper-tab">
+    <view class="swiper-tab-list {{currentTab==idx ? 'on' : ''}}" data-current="{{idx}}" data-tid="{{idx}}" bindtap="swichNav" wx:for="{{navtab}}" wx:key="index" wx:for-index="idx">{{item}}</view>
+  </view>
+</view>
+<view class="swiper-box">
+  <view class="swiper-item" wx:if="{{currentTab===0&&list_none!=0}}">
+    <view class='zong' wx:for="{{shouc}}" wx:key="{{index}}">
+      <view class='da' bindtap="details" data-ids="{{item.discount_id}}">
+        <view class='le'>
+          <view wx:key="index" style="background:url({{item.img}}) no-repeat;background-size:100% 100%;"></view>
+        </view>
+        <view class='ri'>
+          <view class='shang'>
+            <text>{{item.discount_title}}</text>
+            <text>{{item.collection_create_time}}</text>
+          </view>
+          <view class='xia'>
+            MACYS 2018秋季新款全场9折优惠
+          </view>
+        </view>
+        <!-- <image class='shixiao' src='/img/shixiao.png'></image> -->
+      </view>
+      <view class='xiao'>
+        <image src='../../img/shan.png' bindtap='shan' data-ids="{{item.discount_id}}" />
+      </view>
+
+    </view>
+    <view class='mei'>
+      <view></view>
+      <text>没有更多收藏了</text>
+      <view></view>
+    </view>
+  </view>
+  <view class="swiper-item" wx:if="{{currentTab===1&&list_none!=0}}">
+    <view class='lv_ul' wx:for="{{shangpin}}" wx:key="{{index}}">
+      <view>
+        <view class='lv_li' bindtap='showdetais' data-ids="{{item.goods_id}}">
+          <view class='tu'>
+            <view wx:key="index" style="background:url({{item.img[0]}}) no-repeat;background-size:100% 100%;"></view>
+          </view>
+          <view class='wen'>
+            <text>{{item.goods_name}}</text>
+            <text>价格:￥{{item.goods_price}}</text>
+            <text>品牌：{{item.brand_name}}</text>
+            <text>型号：{{item.goods_model}}</text>
+            <text>条码：{{item.goods_barcode}}</text>
+            <text>商家：{{item.shop_name}}</text>
+          </view>
+        </view>
+        <view class='xiao'>
+          <image src='../../img/shan.png' data-idh="{{item.goods_id}}" bindtap='shaner' />
+        </view>
+      </view>
+      <!-- <image class='shixiao_er' src='/img/shixiao.png'></image> -->
+    </view>
+    <view class='mei mei_er'>
+      <view></view>
+      <text>没有更多收藏了</text>
+      <view></view>
+    </view>
+  </view>
+  <view class="swiper-item" wx:if="{{currentTab===2&&list_none!=0}}">
+    <view class='shai' wx:for="{{jiaoyi}}" wx:key="{{index}}">
+      <view bindtap='tiezXiang' data-id="{{item.forum_id}}" style='width:100%;'>
+        <view class='shai_top'>
+          <image src='{{item.user_img}}' class='touxiang' />
+          <view class='{{dis==1?"you_y":"you"}}'>
+            <view class='shang'>
+              <view class='nickname'>
+                <text>{{item.user_nickname}}</text>
+                <image src='{{img}}'/>
+              </view>
+              <view class='jiage'>￥{{item.forum_price}}</view>
+            </view>
+            <view class='wen'>{{item.collection_create_time}}</view>
+
+          </view>
+          <!-- <image class='shixiao' src='/img/shixiao.png'></image> -->
+        </view>
+        <view class='shou'>
+          {{item.forum_title}}
+        </view>
+        <view class='zhi' style="width:100%;">
+          <view class='tu'>
+            <image wx:for="{{item.f_img}}" wx:key="index" src='{{item}}' mode="aspectFill"></image>
+          </view>
+        </view>
+      </view>
+      <view class='di'>
+        <text>浏览{{item.forum_num}}</text>
+        <image src='../../img/shan.png' bindtap='shansan' data-ida="{{item.forum_id}}" />
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{chongzhi==0}}" class='chongzhi'>
+    <view>您不是会员</view>
+    <view>充值后才可查看相关数据</view>
+  </view>
+  <view class='chongzhi' wx:if="{{list_none==0}}">
+    <view>暂无收藏</view>
+  </view>
+</view>

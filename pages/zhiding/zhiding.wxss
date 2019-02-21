@@ -1,0 +1,31 @@
+/* pages/zhiding/zhiding.wxss */
+.youhui{
+  width: 92%;
+  margin: 20rpx auto;
+}
+.youhui view{
+  font-size: 32rpx;
+}
+.youhui text{
+  font-size: 26rpx;
+  color: #9F9F9F ;
+  margin-top: 16rpx；
+}
+
+.tu{
+  width: 92%;
+  margin: auto;
+
+}
+.tu image{
+  width: 682rpx;
+  height: 400rpx;
+  display: block;
+  margin-top: 18rpx;
+  margin-bottom: 18rpx;
+}
+.wxParse-img{
+  width: 100%!important;
+  display: block;
+  margin: auto;
+}
